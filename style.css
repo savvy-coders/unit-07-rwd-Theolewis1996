@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -7,3 +7,47 @@
   display: block;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .column {
+    width: 80%;
+    float: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    background-color: #ccc;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    background-color: #eee;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+      (min--moz-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-device-pixel-ratio: 2) {
+        .column {
+          border-color: red;
+        }
+      }
+
+@media (max-width: 768px) {
+  .nav-item {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.nav {
+  flex: 1;
+  transition-timing-function: ease;
+}
+
